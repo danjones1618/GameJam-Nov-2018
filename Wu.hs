@@ -1,0 +1,1 @@
+data Lecturer = Wu | Others
