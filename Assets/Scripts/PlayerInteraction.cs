@@ -9,13 +9,14 @@ public class PlayerInteraction : MonoBehaviour {
     public GameObject fnoti;
     public GameObject explosion;
     public GameObject bomb;
+    public float explosionradius = 10f;
+    public float explosionforce = 700f;
 
 
 
     void Start()
     {
         fnoti.SetActive(false);
-        explosion.SetActive(false);
     }
     // Update is called once per frame
     void Update () {
@@ -29,21 +30,36 @@ public class PlayerInteraction : MonoBehaviour {
                 if (hit.transform.name == "bomb_working")
                 {
                     BombExplode();
+                    
                 }
             }
         }
         else fnoti.SetActive(false);
-        
-	}
+    }
 
     void BombExplode()
     {
-        Destroy(bomb);
-        ExplosionEffect();
-    }
-    void ExplosionEffect()
-    {
+        Debug.Log("BOOM!");
+        Instantiate(explosion, bomb.transform.position, bomb.transform.rotation);
+        
+        
 
+
+        /*
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionradius);
+
+        foreach (Collider nearbyObject in colliders)
+        {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            if(rb != null)
+            {
+                rb.AddExplosionForce(explosionforce, bomb.transform.position, explosionradius);
+            }
+        }
+        */
+
+        Destroy(bomb);
+        
     }
 
 }
