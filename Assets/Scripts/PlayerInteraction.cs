@@ -7,10 +7,15 @@ public class PlayerInteraction : MonoBehaviour {
     public Camera fpsCam;
     public float range = 2f;
     public GameObject fnoti;
+    public GameObject explosion;
+    public GameObject bomb;
 
-     void Start()
+
+
+    void Start()
     {
         fnoti.SetActive(false);
+        explosion.SetActive(false);
     }
     // Update is called once per frame
     void Update () {
@@ -21,10 +26,24 @@ public class PlayerInteraction : MonoBehaviour {
             if (Input.GetKey("f"))
             {
                 Debug.Log(hit.transform.name);
+                if (hit.transform.name == "bomb_working")
+                {
+                    BombExplode();
+                }
             }
         }
         else fnoti.SetActive(false);
         
 	}
+
+    void BombExplode()
+    {
+        Destroy(bomb);
+        ExplosionEffect();
+    }
+    void ExplosionEffect()
+    {
+
+    }
 
 }
