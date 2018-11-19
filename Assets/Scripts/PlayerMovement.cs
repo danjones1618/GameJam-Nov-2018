@@ -73,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
             transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
         }
 
+        //Ducking
+        if (Input.GetKey("left ctrl")) transform.localScale = new Vector3(1, 0.5f, 1);
+        else transform.localScale = new Vector3(1, 1, 1);
+
     }
 
 
