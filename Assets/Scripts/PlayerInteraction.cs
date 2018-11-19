@@ -6,23 +6,25 @@ public class PlayerInteraction : MonoBehaviour {
 
     public Camera fpsCam;
     public float range = 2f;
+    public GameObject fnoti;
 
-
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKey("f"))
-        {
-            Interact();
-        }
-	}
-
-    void Interact()
+     void Start()
     {
+        fnoti.SetActive(false);
+    }
+    // Update is called once per frame
+    void Update () {
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range) && hit.transform.tag == "interactive")
         {
-            Debug.Log(hit.transform.name);
-
+            fnoti.SetActive(true);
+            if (Input.GetKey("f"))
+            {
+                Debug.Log(hit.transform.name);
+            }
         }
-    }
+        else fnoti.SetActive(false);
+        
+	}
+
 }
