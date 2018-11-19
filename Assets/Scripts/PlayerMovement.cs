@@ -32,10 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
         // W, A, S, D movments
         if (Input.GetKey("a")) {
-            transform.Translate(speed * Time.deltaTime, 0, 0);
+            transform.Translate(-speed * Time.deltaTime, 0, 0, Space.Self);
         }
         if (Input.GetKey("d")) {
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
+            transform.Translate(speed * Time.deltaTime, 0, 0, Space.Self);
         }
         if (Input.GetKey("w")) {
             transform.Translate(0, 0, speed * Time.deltaTime);
