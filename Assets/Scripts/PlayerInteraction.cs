@@ -22,6 +22,7 @@ public class PlayerInteraction : MonoBehaviour {
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range) && hit.transform.tag == "interactive")
         {
             Debug.Log(hit.transform.name);
+
         }
     }
 }
