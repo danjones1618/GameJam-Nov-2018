@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Plane2.unity
+- path: Assets/Scenes/PlayerMovementTest.unity
   isLoaded: 1
   isActive: 1
