@@ -3,6 +3,111 @@ guid: 597c50ad16d09924e87c838a150be10f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: Cabin_Luggage
+    100002: Cabin_Luggage_2
+    100004: Cabin_Luggage_3
+    100006: Cabin_Luggage_4
+    100008: Floor
+    100010: Left_Engine
+    100012: //RootNode
+    100014: Right_Engine
+    100016: Roof
+    100018: Roof_2
+    100020: Roof_2_001
+    100022: Wall
+    100024: Wall_2
+    100026: Wall_3
+    100028: Wall_4
+    100030: Wing_Left
+    100032: Wing_Right
+    400000: Cabin_Luggage
+    400002: Cabin_Luggage_2
+    400004: Cabin_Luggage_3
+    400006: Cabin_Luggage_4
+    400008: Floor
+    400010: Left_Engine
+    400012: //RootNode
+    400014: Right_Engine
+    400016: Roof
+    400018: Roof_2
+    400020: Roof_2_001
+    400022: Wall
+    400024: Wall_2
+    400026: Wall_3
+    400028: Wall_4
+    400030: Wing_Left
+    400032: Wing_Right
+    2100000: Material_004
+    2100002: Material_005
+    2100004: Material_002
+    2100006: Material_001
+    2100008: Material_003
+    2300000: Cabin_Luggage
+    2300002: Cabin_Luggage_2
+    2300004: Cabin_Luggage_3
+    2300006: Cabin_Luggage_4
+    2300008: Floor
+    2300010: Left_Engine
+    2300012: Right_Engine
+    2300014: Roof
+    2300016: Roof_2
+    2300018: Roof_2_001
+    2300020: Wall
+    2300022: Wall_2
+    2300024: Wall_3
+    2300026: Wall_4
+    2300028: Wing_Left
+    2300030: Wing_Right
+    3300000: Cabin_Luggage
+    3300002: Cabin_Luggage_2
+    3300004: Cabin_Luggage_3
+    3300006: Cabin_Luggage_4
+    3300008: Floor
+    3300010: Left_Engine
+    3300012: Right_Engine
+    3300014: Roof
+    3300016: Roof_2
+    3300018: Roof_2_001
+    3300020: Wall
+    3300022: Wall_2
+    3300024: Wall_3
+    3300026: Wall_4
+    3300028: Wing_Left
+    3300030: Wing_Right
+    4300000: Right_Engine
+    4300002: Left_Engine
+    4300004: Wing_Right
+    4300006: Wing_Left
+    4300008: Roof_2_001
+    4300010: Wall_4
+    4300012: Wall_3
+    4300014: Cabin_Luggage_4
+    4300016: Cabin_Luggage_3
+    4300018: Roof_2
+    4300020: Roof
+    4300022: Cabin_Luggage_2
+    4300024: Cabin_Luggage
+    4300026: Wall_2
+    4300028: Wall
+    4300030: Floor
+    6400000: Cabin_Luggage
+    6400002: Cabin_Luggage_2
+    6400004: Cabin_Luggage_3
+    6400006: Cabin_Luggage_4
+    6400008: Floor
+    6400010: Left_Engine
+    6400012: Right_Engine
+    6400014: Roof
+    6400016: Roof_2
+    6400018: Roof_2_001
+    6400020: Wall
+    6400022: Wall_2
+    6400024: Wall_3
+    6400026: Wall_4
+    6400028: Wing_Left
+    6400030: Wing_Right
+    7400000: Default Take
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +161,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

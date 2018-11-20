@@ -3,6 +3,41 @@ guid: 2eee8bd64b06dde408ebbb305c9cbc0d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: Cylinder
+    100002: Cylinder_001
+    100004: Cylinder_002
+    100006: Plane
+    100008: //RootNode
+    100010: Plane_001
+    100012: Plane_002
+    400000: Cylinder
+    400002: Cylinder_001
+    400004: Cylinder_002
+    400006: Plane
+    400008: //RootNode
+    400010: Plane_001
+    400012: Plane_002
+    2100000: unnamed
+    2300000: Cylinder
+    2300002: Cylinder_001
+    2300004: Cylinder_002
+    2300006: Plane
+    2300008: Plane_001
+    2300010: Plane_002
+    3300000: Cylinder
+    3300002: Cylinder_001
+    3300004: Cylinder_002
+    3300006: Plane
+    3300008: Plane_001
+    3300010: Plane_002
+    4300000: Cylinder_002
+    4300002: Cylinder_001
+    4300004: Cylinder
+    4300006: Plane_002
+    4300008: Plane_001
+    4300010: Plane
+    7400000: Default Take
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +91,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

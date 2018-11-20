@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public float minY = -60F;
     public float maxY = 60F;
     public float rotationY = 0f;
+    public AudioClip footstep;
 
     // Use this for initialization
     void Start()
