@@ -24,8 +24,9 @@ public class Target : MonoBehaviour {
         Instantiate(effect, item.transform.position, item.transform.rotation);
     }
 
-    public void Coffee()
+    public void CoffeeAppear(GameObject item)
     {
-
+        item.SetActive(true);
+        //Instantiate(item, machine.transform.position + 0.4f * Vector3.left, machine.transform.rotation);
     }
 }
