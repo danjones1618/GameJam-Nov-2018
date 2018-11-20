@@ -8,60 +8,78 @@ public class PlayerInteraction2 : MonoBehaviour {
     public float range = 3f;
     public GameObject fnoti;
     Target target;
-    public GameObject bomb;
-    public GameObject bombEffect;
-    public GameObject pill;
-    public GameObject leverup;
-    public GameObject leverdown;
+    public GameObject gamelogic;
+
+    GameLogic gl;
 
     // Use this for initialization
     void Start () {
         fnoti.SetActive(false);
+        gl = gamelogic.GetComponent<GameLogic>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         RaycastHit hit;
+
+        
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range) && hit.transform.tag == "interactive")
         {
             fnoti.SetActive(true);
             if (Input.GetKeyDown("f"))
             {
                 Debug.Log(hit.transform.name);
-                if (hit.transform.name == "bomb_working")
+                if (hit.transform.gameObject == gl.bomb)
                 {
                     Target target = hit.transform.GetComponent<Target>();
                     if (target != null)
                     {
-                        target.Explode(bomb, bombEffect);
-                        target.Destroyitem(bomb);
+                        target.Explode(gl.bomb, gl.bombEffect);
+                        target.Destroyitem(gl.bomb);
                     }
                 }
-                if (hit.transform.name == "sleeping_pill")
+                if (hit.transform.gameObject == gl.pill)
                 {
                     Target target = hit.transform.GetComponent<Target>();
                     if (target != null)
                     {
-                        target.Destroyitem(pill);
+                        target.Destroyitem(gl.pill);
                     }
                     
                 }
-                if (hit.transform.name == "leverup")
+                if (hit.transform.gameObject == gl.leverup)
                 {
                     Target target = hit.transform.GetComponent<Target>();
                     if (target != null)
                     {
-                        target.Destroyitem(leverup);
-                        leverdown.SetActive(true);
+                        target.Destroyitem(gl.leverup);
+                        gl.leverdown.SetActive(true);
                     }
                 }
-                if (hit.transform.name == "leverdown")
+                if (hit.transform.gameObject == gl.leverdown)
                 {
                     Target target = hit.transform.GetComponent<Target>();
                     if (target != null)
                     {
-                        target.Destroyitem(leverdown);
-                        leverup.SetActive(true);
+                        target.Destroyitem(gl.leverdown);
+                        gl.leverup.SetActive(true);
+                    }
+                }
+                if (hit.transform.gameObject == gl.coffeeMachine)
+                {
+                    Target target = hit.transform.GetComponent<Target>();
+                    if (target != null)
+                    {
+                        target.CoffeeAppear(gl.coffee);
+                    }
+                }
+                if (hit.transform.gameObject == gl.coffee)
+                {
+                    Target target = hit.transform.GetComponent<Target>();
+                    if (target != null)
+                    {
+                        target.Destroyitem(gl.coffee);
+                        gl.coffeeInventory.SetActive(true);
                     }
                 }
             }

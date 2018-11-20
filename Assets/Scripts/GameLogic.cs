@@ -5,16 +5,24 @@ using UnityEngine;
 public class GameLogic : MonoBehaviour {
 
     public GameObject bomb;
+    public GameObject bombEffect;
     public GameObject pill;
     public GameObject pillInventory;
     public GameObject gameoverScreen;
-    public float onesec = 1f;
+    float onesec = 1f;
     float countdown;
+    public GameObject leverup;
+    public GameObject leverdown;
+    public GameObject coffeeMachine;
+    public GameObject coffee;
+    public GameObject coffeeInventory;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         gameoverScreen.SetActive(false);
         pillInventory.SetActive(false);
+        coffeeInventory.SetActive(false);
+        coffee.SetActive(false);
         countdown = onesec;
 
 	}
@@ -30,9 +38,15 @@ public class GameLogic : MonoBehaviour {
                 gameoverScreen.SetActive(true);
             }
         }
-        if(pill.activeInHierarchy == false)
+
+        if (pill.activeInHierarchy == false)
         {
             pillInventory.SetActive(true);
+        }
+        
+        if (coffeeInventory.activeInHierarchy == true && pillInventory.activeInHierarchy == true)
+        {
+            Debug.Log("can mix");
         }
 	}
 }
